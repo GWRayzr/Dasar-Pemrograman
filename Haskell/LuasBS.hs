@@ -1,12 +1,16 @@
+module LuasBS where
+
 --DEFINISI DAN SPESIFIKASI
 luasBS :: Float -> Float
-{-Mengukur luas bujur sangkar dengan masukan sisi 
-menggunakan pendekatan rekursif-}
+{-luasBS(n) adalah fungsi yang mengeluarkan luas bujur 
+   sangkar dengan sisi n-}
 
 --REALISASI
-luasBS s
-    | s == 0 = 0
-    | otherwise = luasBS (s-1) + 2*s-1
+luasBS n
+  | n == 0 = 0
+  | otherwise = luasBS (n-1) + 2*n-1
 
 --APLIKASI
---luasBS 5
+-- luasBS 1
+-- luasBS 3
+-- luasBS 4
